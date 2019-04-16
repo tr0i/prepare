@@ -8,7 +8,7 @@ int main()
     decimalNumber = 1;
 
     int i;
-    for(i = 205; i < 256; ++i)
+    for(i = 175; i < 176; ++i)
     {
         octalNumber = ConvertDecimalToOctal(i);
         printf("[%d] - [%d]\n", i, octalNumber);

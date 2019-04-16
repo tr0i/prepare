@@ -11,7 +11,7 @@ int main()
 {
     int i;
 
-    for(i = 0; i < 65; ++i)
+    for(i = 69; i < 71; ++i)
     {
         printf("[%d] (decimal) = [%d] (octal)\n", i, decimalToOctal(i));
     }
@@ -27,13 +27,28 @@ int decimalToOctal(int input_decimal)
     dividend = input_decimal;
     octal_result = 0;
 
-    while(dividend <= 8)
+
+    //do
+    //{
+    //    rest = dividend % 8;
+    //    printf("rest - [%d]\n", rest);
+    //    dividend /= 8;
+    //    printf("dividend - [%d]\n", dividend);
+
+    //    octal_result = (octal_result * 10) + rest;
+
+    //} while(dividend > 0);
+    
+    while(dividend)
     {
         rest = dividend % 8;
+        printf("rest - [%d]\n", rest);
         dividend /= 8;
+        printf("dividend - [%d]\n", dividend);
 
         octal_result = (octal_result * 10) + rest;
     }
-    
+
+
     return octal_result;
 }
